@@ -5,34 +5,28 @@ www.dio.me
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
 
 ## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+Building a parking system, designed to manage parked vehicles and carry out operations such as adding, removing, and listing a vehicle. Upon vehicle removal, the total amount to be paid should be displayed.
 
 ## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+Create a class named "ParkingLot" with three variables:
 
-A classe contém três variáveis, sendo:
+initialPrice: Decimal type. It is the fee charged for leaving your vehicle parked.
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+pricePerHour: Decimal type. It is the hourly rate for the vehicle's parking.
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+vehicles: A list of strings representing a collection of parked vehicles. It only contains the vehicle's license plate.
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+The class includes three methods:
 
-A classe contém três métodos, sendo:
+AddVehicle: A method responsible for receiving a user-scanned license plate and saving it to the list of vehicles.
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+VehicleRemover: A method responsible for checking if a specific vehicle is parked. If positive, it will ask for the number of hours the vehicle has been in the parking lot. Afterward, perform the following calculation: initialPrice * pricePerHour, displaying it to the user.
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+ListVehicles: Lists all vehicles currently in the parking lot. If there are none, display the message "No vehicles parked."
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+Finally, an interactive menu with the following actions should be implemented:
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
-
-
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+1.Register vehicle
+2.Vehicle remover
+3.List vehicles
+4.End
